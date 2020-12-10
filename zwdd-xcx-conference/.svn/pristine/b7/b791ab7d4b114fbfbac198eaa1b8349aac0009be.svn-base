@@ -1,0 +1,1 @@
+import invoker from"./invoker";function stopWatchShakeHandler(e,o){var t=o.resolve,n=o.reject,r=o.context;r&&r.call("stopWatchShake",e,(function(e){invoker.removeContinuesEvent("shake"),invoker.handleBridgeResponse(e,t,n)}))}invoker.registerAPI("stopWatchShake",{mobile:stopWatchShakeHandler});export default function stopWatchShake(){return invoker.invoke("stopWatchShake")}

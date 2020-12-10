@@ -1,0 +1,13 @@
+export interface SaveFileParams {
+    corpId: string;
+    url: string;
+    name: string;
+}
+export interface SaveFileResult {
+    spaceId: string;
+    fileId: string;
+    fileName: string;
+    fileSize: number;
+    fileType: string;
+}
+export default function saveFile(params: SaveFileParams): Promise<SaveFileResult>;

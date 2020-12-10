@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("searchOnMap",{mini:!0,mobile:!0});export default function searchOnMap(e){return invoker.invoke("searchOnMap",e)}

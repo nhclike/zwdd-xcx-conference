@@ -1,0 +1,11 @@
+export interface GetPhoneInfoResult {
+    screenWidth: number;
+    screenHeight: number;
+    brand: string;
+    model: string;
+    version: string;
+    netInfo: string;
+    operatorType: string;
+    statusBarHeight: number;
+}
+export default function getPhoneInfo(): Promise<GetPhoneInfoResult>;

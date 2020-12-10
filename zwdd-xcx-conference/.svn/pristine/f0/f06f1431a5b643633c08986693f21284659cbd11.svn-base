@@ -1,0 +1,1 @@
+import invoker from"./invoker";function setTitleHandler(e,t){var i=t.resolve,n=t.context;n&&n.call("setTitle",e,(function(){i()}))}invoker.registerAPI("setTitle",{mini:setTitleHandler,mobile:setTitleHandler,pc:function(e,t){window.dingtalk.platform.invokeAPI(t.msgId,"biz.navigation.setTitle",e)}});export default function setTitle(e){return invoker.invoke("setTitle",e)}

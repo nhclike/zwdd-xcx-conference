@@ -1,0 +1,20 @@
+export interface SearchOnMapParams {
+    latitude?: number;
+    longitude?: number;
+    scope?: number;
+}
+export interface SearchOnMapResult {
+    province: string;
+    provinceCode: string;
+    city: string;
+    cityCode: string;
+    adName: string;
+    adCode: string;
+    distance: string;
+    postCode: string;
+    snippet: string;
+    title: string;
+    latitude: number;
+    longitude: number;
+}
+export default function searchOnMap(params: SearchOnMapParams): Promise<SearchOnMapResult>;

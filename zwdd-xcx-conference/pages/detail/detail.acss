@@ -1,0 +1,62 @@
+/* @import "./../../image/icon/iconfont.acss"; */
+@import "./../index/index.acss";
+.topic-list{
+    margin: 16px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 10rpx 10rpx 10rpx #ddd;
+}
+.topic-list>.title{
+  font-weight: bolder;
+  font-size: 35rpx;
+  color: #000;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* border-bottom: 1px dashed #ddd; */
+}
+.topic-item>.name{
+  color: #000;
+  font-weight: bolder;
+  margin: 4px 0;
+}
+.report-info{
+  color: #999;
+  margin: 4px 0;
+}
+.report{
+  border-bottom: 1px dashed #ddd;
+  padding: 4px 0;
+
+}
+.reportPeople{
+  margin-right: 4px;
+
+}
+
+.detail{
+  width: 120rpx;
+}
+.topic-member{
+  display: flex;
+  color: #999;
+}
+.topic-member>.label{
+  flex: 0 0 120rpx;
+}
+.topic-member>.content{
+  flex: 1;
+}
+.icon-up{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 4px;
+  background: transparent url("./../../image/icon/icon-up.png") 0 0 /30rpx 30rpx no-repeat;
+}
+.icon-down{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 4px;
+  background: transparent url("./../../image/icon/icon-down.png") 0 0 /30rpx 30rpx no-repeat;
+}

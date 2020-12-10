@@ -1,0 +1,5 @@
+@import '../../components/list-view/index.acss';
+@import '../../components/error-view/index.acss';
+.list-box{
+  height: 40vh;
+}

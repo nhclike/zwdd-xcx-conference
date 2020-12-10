@@ -1,0 +1,11 @@
+export interface ShowExtendModalParams {
+    cells: {
+        image: string;
+        title: string;
+        content: string;
+    }[];
+    buttonLabels: string[];
+}
+export default function showExtendModal(args: ShowExtendModalParams): Promise<{
+    buttonIndex: number;
+}>;

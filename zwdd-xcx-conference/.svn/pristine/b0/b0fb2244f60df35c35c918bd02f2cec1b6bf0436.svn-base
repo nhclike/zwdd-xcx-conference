@@ -1,0 +1,87 @@
+.confScrollBox{
+    height: 100%;
+}
+.confScrollBox::after{
+    content: "";
+    display:table;
+}
+.confScrollBox::before{
+    content: "";
+    display:table;
+}
+/* 会议列表样式 */
+.item-box{
+    margin: 16px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 10rpx 10rpx 10rpx #ddd;
+    
+}
+.conf-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.conf-title>.label{
+    background: transparent url("./../../image/typeBg.png") 0 0 / 120rpx 60rpx no-repeat;
+    color: #fff;
+    margin-left: -25px;
+    flex: 0 0 120rpx;
+    height: 55rpx;
+    line-height: 55rpx;
+    text-align: center;
+
+}
+.conf-title>.name{
+   font-size: 35rpx;
+    color: #000;
+    font-weight: bolder; 
+     margin: 0 8px;
+     flex: 1;
+
+}
+.conf-title>.status{
+    color: #ff7631;
+    background: #ffece3;
+    padding: 5rpx;
+    flex: 0 0 110rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+}
+
+.conf-time{
+    color: #999;
+    padding: 4px 0;
+    border-bottom: 1px dashed #ddd;
+}
+.cont-num,.con-member{
+   color: #999;
+    padding: 4px 0; 
+}
+
+.f-right{
+    float:right 
+}
+.red{
+    color: #e4393c
+}
+.con-member{
+    display: flex;
+
+}
+.con-member>.label{
+    flex: 0 0 180rpx;
+}
+.con-member>.content{
+    flex: 1;
+}
+.more{
+    color: #999;
+    text-align: center;
+    margin-bottom: 4px;
+    /* font-size: 20rpx; */
+}

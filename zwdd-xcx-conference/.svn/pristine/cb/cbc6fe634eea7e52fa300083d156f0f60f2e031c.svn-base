@@ -1,0 +1,10 @@
+export interface PromptParams {
+    message: string;
+    title: string;
+    buttonLabels: string[];
+}
+export interface PromptResult {
+    buttonIndex: number;
+    value: string;
+}
+export default function prompt(params: PromptParams): Promise<PromptResult>;

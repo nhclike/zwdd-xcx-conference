@@ -1,0 +1,14 @@
+declare type SourceType = 'album' | 'camera';
+export interface ChooseVideoParams {
+    sourceType?: SourceType[];
+    maxDuration?: string;
+}
+export interface ChooseVideoResult {
+    filePath: string;
+    duration: string;
+    size: number;
+    height: number;
+    width: number;
+}
+export default function chooseVideo(args: ChooseVideoParams): Promise<ChooseVideoResult>;
+export {};

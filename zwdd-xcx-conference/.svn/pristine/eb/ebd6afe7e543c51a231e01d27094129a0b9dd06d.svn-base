@@ -1,0 +1,9 @@
+export interface ActionSheetSelectResult {
+    buttonIndex: number;
+}
+export interface ActionSheetParams {
+    title: string;
+    cancelButton: string;
+    otherButtons: string[];
+}
+export default function showActionSheet(params: ActionSheetParams): Promise<ActionSheetSelectResult>;

@@ -1,0 +1,3 @@
+export default function unsubscribe(params: {
+    channel: string;
+}): Promise<{}>;

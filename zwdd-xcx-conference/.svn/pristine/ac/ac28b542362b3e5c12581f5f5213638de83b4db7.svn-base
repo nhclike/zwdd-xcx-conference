@@ -1,0 +1,132 @@
+export interface InvokePCAPIOptions {
+    /**
+     * PC 端调用时需要传递对应 PC 端上定义的开放平台三方 API 名称
+     * 比如：'biz.contact.choose'
+     * 这个选项配置由于钉钉 PC、移动端有所不同，所以需要支持 PC 时
+     * 需要在这一层进行定义
+     */
+    pcClientAPIName?: string;
+    msgId: number;
+}
+export interface InvokeContext<T> {
+    call(methodName: string, args: object, callback: (result: T) => void): any;
+}
+export interface InvokeOptions<T> extends InvokePCAPIOptions {
+    context?: InvokeContext<T>;
+    methodName?: string;
+    resolve?: (result?: any) => void;
+    reject?: (result?: any) => void;
+}
+export interface OnFailCallback {
+    (error: {
+        errorCode: BRIDGE_ERROR_CODE;
+        message?: string;
+    }): void;
+}
+export declare enum BRIDGE_ERROR_CODE {
+    CANCEL = "-1",
+    SUCCESS = "0",
+    API_UNDEFINED = "1",
+    INVALID_PARAMS = "2",
+    UNKNOWN_ERROR = "3",
+    UNAUTHORIZED_CALL = "4",
+    WRONG_CORP_ID = "5",
+    CREATE_CHAT_FAILED = "6",
+    UNAUTHORIZED_API = "7",
+    /**
+     * @deprecated
+     * 安卓历史问题，跟错误码5重复，此code废弃，统一使用 5
+     */
+    INVALID_CORP_ID = "8",
+    SERVER_RESPONSE_ERROR = "9",
+    WRONG_DEVICE_INFO = "10",
+    UPLOAD_FAIL = "11",
+    /**
+     * @deprecated
+     * 因安卓和ios，code表达信息有差异， 此code废弃, 新的 jsapi 不允许使用此 code
+     */
+    PROCESS_FAIL = "12",
+    DUPLICATED_CALL = "13",
+    TOO_LARGE_PIC = "14",
+    /**
+     * @deprecated
+     * 请求被拒绝 or 不安全的链接
+     * 因安卓和ios，code表达信息有差异，此code废弃, 新的 jsapi 不允许使用此code
+     */
+    REQUEST_REJECT_OR_INSECURE_REQUEST = "15",
+    PC_NOT_ALLOWED_TO_OPEN_SIDE_PANE_OR_MODAL = "21",
+    PC_CLOSE_SIDE_PANE_OR_MODAL = "22",
+    UNAUTHORIZED_PARAMS = "23",
+    GESTURE_PASSWORD_DOES_NOT_EXIST = "24",
+    NETWORK_ERROR = "25"
+}
+export interface BridgeCallbackResult<T> {
+    errorCode?: BRIDGE_ERROR_CODE;
+    errorMessage?: string;
+    result?: T;
+    success?: 'true' | 'false';
+}
+export declare enum API_INVOKER_TYPE {
+    MOBILE = "mobile",
+    PC = "pc",
+    MINI_APP = "mini",
+    UNKNOWN = "unknown"
+}
+declare type LISTENER_FN = (...args: any[]) => void;
+export declare enum CONTINUOUS_EVENT_LIST {
+    UPDATE_NETWORK_STATUS = "DINGGOV_ON_NETWORK_TYPE_CHANGED",
+    UPDATE_LOCATION = "DINGGOV_GEO_LOCATION_UPDATE",
+    UPDATE_TRACE = "DINGGOV_TRACE_UPDATE",
+    ON_SHAKE = "onShake"
+}
+export interface InvokeFn<T> {
+    (params: object, options: InvokeOptions<T>): Promise<T> | void;
+}
+export interface InvokeFnMap<T, U, K> {
+    [API_INVOKER_TYPE.MOBILE]?: InvokeFn<T> | boolean;
+    [API_INVOKER_TYPE.PC]?: InvokeFn<U> | boolean;
+    [API_INVOKER_TYPE.MINI_APP]?: InvokeFn<K> | boolean;
+}
+declare type InvokerType = Invoker;
+interface ReadyFn<T> {
+    (invoker: T): void;
+}
+declare class Invoker {
+    private currentInvoker;
+    private readyFnStack;
+    private callbackStack;
+    private generalEventCallbackStack;
+    private apiList;
+    private continuousCallbackStack;
+    protected isH5Mobile: null | boolean;
+    protected appType: null | API_INVOKER_TYPE;
+    protected aliBridge: any;
+    protected isReady: boolean;
+    constructor();
+    private init;
+    private execReadyFn;
+    onReady(fn: ReadyFn<this>): void;
+    setCurrentInvoker(invoker: InvokerType): void;
+    getCurrentInvoker(): InvokerType;
+    getBridge(): any;
+    getAppType(): API_INVOKER_TYPE;
+    /**
+     * 是否为政务钉钉移动端 H5 客户端
+     */
+    isMobile(): boolean;
+    registerEvent(eventName: string, callback: Function): LISTENER_FN;
+    private registerClientAPI;
+    registerAPI<T, U, K>(apiName: string, invokerMap: InvokeFnMap<T, U, K>): void;
+    registerAPI<T>(apiName: string, invokeFn: InvokeFn<T>): void;
+    private invokeMiniApp;
+    private invokeMobile;
+    private findFitMsgId;
+    private invokePC;
+    handleBridgeResponse(result: BridgeCallbackResult<any>, resolve: any, reject: any): void;
+    invoke<T>(methodName: string, args?: object, options?: InvokePCAPIOptions): Promise<T>;
+    existEventListener(identifier: string | number): boolean;
+    registerContinuesEvent(identifier: string | number, callback: LISTENER_FN): void;
+    removeContinuesEvent(identifier: string | number): void;
+}
+declare const _default: Invoker;
+export default _default;

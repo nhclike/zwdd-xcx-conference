@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("openSlidePanel",{pc:function(e,n){window.dingtalk.platform.invokeAPI(n.msgId,"biz.util.openSlidePanel",e)}});export default function downloadFile(e){return invoker.invoke("openSlidePanel",e)}

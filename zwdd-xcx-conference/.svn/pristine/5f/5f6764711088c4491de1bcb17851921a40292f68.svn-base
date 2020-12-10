@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("pickChat",{mini:!0,mobile:!0});export default function pickChat(i){return invoker.invoke("pickChat",i)}

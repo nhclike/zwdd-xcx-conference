@@ -1,0 +1,10 @@
+export interface ChooseDateRangeParams {
+    defaultStart?: number;
+    defaultEnd?: number;
+}
+export interface ChooseDateRangeResult {
+    start: number;
+    end: number;
+    timezone: number;
+}
+export default function showDateTimePicker(args: ChooseDateRangeParams): Promise<ChooseDateRangeResult>;

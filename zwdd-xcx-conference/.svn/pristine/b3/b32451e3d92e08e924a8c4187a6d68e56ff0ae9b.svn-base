@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("rotateView",{mini:!0,mobile:!0});export default function rotateView(e){return invoker.invoke("rotateView",e)}

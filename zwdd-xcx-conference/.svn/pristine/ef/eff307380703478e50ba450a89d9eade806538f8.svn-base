@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("setNavIcon",{mobile:!0});export default function setNavIcon(e){return invoker.invoke("setNavIcon",e)}

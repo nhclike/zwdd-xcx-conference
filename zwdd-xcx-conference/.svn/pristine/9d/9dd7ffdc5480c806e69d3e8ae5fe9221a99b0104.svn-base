@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("chooseSpaceDir",{mini:!0,mobile:!0});export default function chooseSpaceDir(){return invoker.invoke("chooseSpaceDir")}

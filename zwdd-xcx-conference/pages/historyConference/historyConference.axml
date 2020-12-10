@@ -1,0 +1,63 @@
+<import src="../../components/error-view/index.axml" />
+
+<view>
+  <view class="conf-container" >
+    <view class="tab-box"> 
+      <view class="tab-item">
+        <text class="title  {{isActive ? 'active' : ''}}" data-value="0" onTap="toggleTab">党组会</text>
+        
+      </view>
+      <view class="tab-item">
+        <text class="title  {{!isActive ? 'active' : ''}}" data-value="1" onTap="toggleTab">审委会</text>
+        
+      </view>
+    </view>
+    <scroll-view scroll-y="{{true}}" onScrollToLower="loadMore" onScroll="scroll" class="confScrollBox" a:if="{{!isBlank}}">
+        <view class="conf-list">
+            <block a:for={{confList}}>
+                <view class="item-box" onTap="toDetail" data-type="{{item.type}}" data-value="{{item.id}}">
+                    <view class="conf-title">
+                        <text class="label">{{item.typeName}}</text>
+                        <text class="name">{{item.name}}</text>
+                        <!-- <text class="status">{{item.statusName}}</text> -->
+                    </view>
+                    <view class="conf-time">
+                    <text>主持人:</text>
+                    <text>{{item.presenterName}}</text>
+                    <text class="f-right">{{item.startTime}}</text>
+                    <text class="f-right">召开时间:</text>
+                    <!-- <text class="f-right">出席情况</text> -->
+                    </view>
+                    <view class="cont-num">
+                    <text>实到人数:</text>
+                    <text><text class="red">{{item.arrivedNum}}</text>人</text>
+                    <text class="f-right">
+                    <text class="red">{{item.leaveNum}}</text>
+                    人</text>
+                    <text class="f-right">请假人员:</text>
+                    </view>
+                    <view class="con-member" a:if="{{item.type==0}}">
+                        <view class="label">
+                        <text>列席人员:</text>
+                            <text class="red">{{item.attendNum}}</text>
+                            <text>人</text>
+                    </view>
+                    
+                    <view class="content">{{item.attendData}}</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+       <view a:if="{{!isMore}}" class="more">
+         没有更多数据!
+        </view>
+    </scroll-view>
+     
+    <template is="ErrorView" data={{...errorData}} a:else/>
+
+  </view>
+
+
+</view>
+
+

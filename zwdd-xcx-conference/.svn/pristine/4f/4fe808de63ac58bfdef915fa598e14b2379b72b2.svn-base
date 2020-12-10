@@ -1,0 +1,6 @@
+export interface ScanParams {
+    type?: 'all' | 'qrCode' | 'barCode';
+}
+export default function scan(params: ScanParams): Promise<{
+    text: string;
+}>;

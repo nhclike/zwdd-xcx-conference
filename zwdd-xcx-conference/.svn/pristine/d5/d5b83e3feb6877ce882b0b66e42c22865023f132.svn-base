@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("createDing",{mini:!0,mobile:!0,pc:function(e,i){window.dingtalk.platform.invokeAPI(i.msgId,"biz.ding.create",e)}});export default function createDing(e){return invoker.invoke("createDing",e)}

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("hideLoading",{mini:!0,mobile:!0});export default function hideLoading(i){return invoker.invoke("hideLoading",i)}

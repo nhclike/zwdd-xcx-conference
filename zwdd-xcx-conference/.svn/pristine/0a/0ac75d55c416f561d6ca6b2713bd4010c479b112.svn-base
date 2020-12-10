@@ -1,0 +1,6 @@
+export interface showCallMenuParams {
+    phoneNumber: string;
+    code: string;
+    showDingCall?: boolean;
+}
+export default function showCallMenu(params: showCallMenuParams): Promise<{}>;

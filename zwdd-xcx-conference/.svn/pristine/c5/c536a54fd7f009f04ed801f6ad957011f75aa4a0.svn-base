@@ -1,0 +1,5 @@
+export interface RequestGetConfigResult {
+    host?: string;
+    mediaHost?: string;
+}
+export default function getConfig(): Promise<RequestGetConfigResult>;

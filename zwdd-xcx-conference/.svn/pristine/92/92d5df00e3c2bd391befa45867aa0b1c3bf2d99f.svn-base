@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("playAudio",{mini:!0,mobile:!0});export default function playAudio(i){return invoker.invoke("playAudio",i)}

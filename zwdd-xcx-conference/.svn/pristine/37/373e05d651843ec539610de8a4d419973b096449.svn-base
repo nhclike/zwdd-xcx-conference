@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("dealWithBackAction",{mobile:!0});export default function dealWithBackAction(i){return invoker.invoke("dealWithBackAction",i)}

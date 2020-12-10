@@ -1,0 +1,8 @@
+export interface RequestOpenPageParams {
+    name: 'profile';
+    params?: {
+        corpId?: string;
+        id?: string;
+    };
+}
+export default function openPage(params: RequestOpenPageParams): Promise<{}>;

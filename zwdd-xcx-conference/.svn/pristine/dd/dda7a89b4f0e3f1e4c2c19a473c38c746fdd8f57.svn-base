@@ -1,0 +1,4 @@
+export interface VibrateParams {
+    duration?: number;
+}
+export default function vibrate(args: VibrateParams): Promise<void>;

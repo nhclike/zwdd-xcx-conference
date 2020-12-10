@@ -1,0 +1,12 @@
+export interface RequestChooseContactParams {
+    multiple?: boolean;
+    users?: Array<string>;
+    max?: number;
+    responseUserOnly?: boolean;
+}
+export interface ChooseContactResultItem {
+    name: string;
+    avatar: string;
+    emplId: string;
+}
+export default function chooseContact(args: RequestChooseContactParams): Promise<ChooseContactResultItem[]>;

@@ -1,0 +1,1 @@
+import invoker from"./invoker";export var ImageType;!function(e){e[e.image=0]="image",e[e.video=1]="video"}(ImageType||(ImageType={})),invoker.registerAPI("dgChooseImage",{mini:!0,mobile:!0,pc:function(e,o){window.dingtalk.platform.invokeAPI(o.msgId,"biz.util.dgChooseImage",e)}});export default function chooseImage(e){return invoker.invoke("dgChooseImage",e)}

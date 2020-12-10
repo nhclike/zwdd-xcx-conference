@@ -1,0 +1,4 @@
+export interface CheckVPNAppOnlineResult {
+    isOnline: boolean;
+}
+export default function checkVPNAppOnline(): Promise<CheckVPNAppOnlineResult>;

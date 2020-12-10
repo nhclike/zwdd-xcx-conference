@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("createChatGroup",{mini:!0,mobile:!0});export default function createChatGroup(e){return invoker.invoke("createChatGroup",e)}

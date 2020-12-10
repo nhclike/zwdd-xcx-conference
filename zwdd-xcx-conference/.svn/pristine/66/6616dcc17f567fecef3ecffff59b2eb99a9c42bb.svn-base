@@ -1,0 +1,6 @@
+export interface StopVPNAppParams {
+    vpnAddress: string;
+    authInfo: string;
+    authType: string;
+}
+export default function stopVPNApp(params: StopVPNAppParams): Promise<void>;

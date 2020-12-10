@@ -1,0 +1,6 @@
+export interface RequestPreviewDocParams {
+    fileId?: string;
+    fileName?: string;
+    fileUrl?: string;
+}
+export default function previewDoc(args: RequestPreviewDocParams): Promise<{}>;

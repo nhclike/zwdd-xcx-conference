@@ -1,0 +1,5 @@
+export interface RecordResult {
+    mediaId: string;
+    duration: number;
+}
+export default function stopRecordAudio(params: {}): Promise<RecordResult>;

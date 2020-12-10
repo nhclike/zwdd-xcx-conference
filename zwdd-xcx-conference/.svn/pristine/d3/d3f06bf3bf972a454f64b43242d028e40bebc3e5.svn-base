@@ -1,0 +1,7 @@
+export interface LinkParams {
+    url: string;
+    params: {
+        [key: string]: string | boolean | number;
+    };
+}
+export default function openLink(params: LinkParams): Promise<{}>;

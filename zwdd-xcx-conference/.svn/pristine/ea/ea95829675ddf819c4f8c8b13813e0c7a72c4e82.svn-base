@@ -1,0 +1,9 @@
+require('@alipay/appx-compiler/lib/sjsEnvInit');
+require('./config$');
+
+require('../../pages/index/index?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/historyConference/historyConference?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/detail/detail?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/error/error?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/test/test?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/history/history?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');

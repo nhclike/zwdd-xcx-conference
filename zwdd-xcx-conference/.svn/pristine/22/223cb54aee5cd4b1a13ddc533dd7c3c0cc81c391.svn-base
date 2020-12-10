@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("showMultiSelect",{mini:!0,mobile:!0});export default function showMultiSelect(e){return invoker.invoke("showMultiSelect",e)}

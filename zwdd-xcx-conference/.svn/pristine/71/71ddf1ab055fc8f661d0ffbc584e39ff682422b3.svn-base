@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("chooseFile",{mini:!0,mobile:!0,pc:function(o,i){window.dingtalk.platform.invokeAPI(i.msgId,"biz.util.chooseFile",o)}});export default function chooseFile(o){return invoker.invoke("chooseFile",o)}

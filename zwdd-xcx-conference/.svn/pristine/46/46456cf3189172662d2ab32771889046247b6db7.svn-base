@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("uploadFileByType",{mini:!0,mobile:!0});export default function uploadFileByType(e){return invoker.invoke("uploadFileByType",e)}

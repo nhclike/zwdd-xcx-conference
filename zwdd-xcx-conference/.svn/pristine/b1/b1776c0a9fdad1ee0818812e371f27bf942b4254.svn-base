@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("onRecordAudioEnd",{mini:!0,mobile:!0});export default function onRecordAudioEnd(o){return invoker.invoke("onRecordAudioEnd",o)}

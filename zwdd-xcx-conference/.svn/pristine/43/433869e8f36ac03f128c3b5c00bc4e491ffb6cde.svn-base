@@ -1,0 +1,18 @@
+export interface RemoteFile {
+    createTime: number;
+    extension: string;
+    mediaId: string;
+    modifiedTime: number;
+    name: string;
+}
+export interface UploadRemoteFileToDiskResult {
+    file: RemoteFile;
+}
+interface UploadRemoteFileToDiskParams {
+    dirId: string;
+    spaceId: string;
+    fileName: string;
+    mediaId: string;
+}
+export default function uploadRemoteFileToDisk(params: UploadRemoteFileToDiskParams): Promise<UploadRemoteFileToDiskResult>;
+export {};

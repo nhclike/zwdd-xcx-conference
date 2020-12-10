@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("chooseDepartments",{mini:!0,mobile:!0,pc:function(e,o){window.dingtalk.platform.invokeAPI(o.msgId,"biz.contact.departmentsPicker",e)}});export default function chooseDepartments(e){return invoker.invoke("chooseDepartments",e)}

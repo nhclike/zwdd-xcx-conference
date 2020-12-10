@@ -1,0 +1,75 @@
+@import '../../components/list-view/index.acss';
+@import '../../components/error-view/index.acss';
+page{
+    height: 100vh;
+    background: #1677FF url("image/bg.png")  no-repeat fixed top;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.content-box{
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*搜索盒子*/
+.search-box{
+  width: 100vw; 
+  position: relative;
+  height: 100rpx;
+}
+.search-box::before{
+  content: "";
+  display: table;
+}
+input{
+  border-radius: 60rpx;
+  height: 50rpx;
+  margin: 25rpx 30rpx;
+  display: block;
+  background: #fff;
+  color: #666;
+  padding: 10rpx 30rpx 10rpx 80rpx;
+  font-size: 30rpx;
+}
+.icon-search{
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 4px;
+  background: transparent url("./../../image/icon/icon-search.png") 0 0 /30rpx 30rpx no-repeat;
+  top:40rpx;
+  left: 40rpx;
+}
+
+/* tab项样式 */
+.tab-box{
+    display: flex;
+    justify-items: center;
+    z-index: 99;
+    position: relative;
+    background: #1677FF;
+    height: 100rpx;
+    padding: 20rpx 0;
+}
+.tab-box>.tab-item{
+    width: 25%;
+    text-align: center;
+    color: #fff;
+}
+.tab-box>.tab-item>.title{
+    border-bottom:1px solid transparent;
+    height: 60rpx;
+    line-height: 60rpx;
+    display: inline-block;
+    font-size: 30rpx;
+}
+.tab-box>.tab-item>.active{
+    border-bottom:0.5pt solid #fff;
+
+}
+/*列表盒子*/
+.list-box{
+ height: 100vh;
+ padding-top: 200rpx;
+ margin-top: -200rpx;
+}

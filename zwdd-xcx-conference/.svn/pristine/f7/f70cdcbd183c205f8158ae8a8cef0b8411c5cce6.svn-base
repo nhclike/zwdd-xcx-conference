@@ -1,0 +1,113 @@
+@import '../../components/error-view/index.acss';
+
+page{
+    height: 100vh;
+    background: #1677FF url("image/bg.png")  no-repeat fixed top;
+    width: 100vw;
+}
+
+.confScrollBox{
+    height: 100vh;
+    padding-top: 48pt;
+    margin-top: -48pt;
+}
+/* tab项样式 */
+.tab-box{
+    display: flex;
+    justify-items: center;
+    z-index: 99;
+    position: relative;
+    background: #1677FF;
+}
+.tab-box>.tab-item{
+    width: 50%;
+    text-align: center;
+    color: #fff;
+}
+.tab-box>.tab-item>.title{
+    border-bottom:1px solid transparent;
+    height: 48pt;
+    line-height: 48pt;
+    display: inline-block;
+}
+.tab-box>.tab-item>.active{
+    border-bottom:0.5pt solid #fff;
+
+}
+/* 会议列表样式 */
+.item-box{
+    margin: 16px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 10rpx 10rpx 10rpx #ddd;
+    
+}
+.conf-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.conf-title>.label{
+    background: transparent url("./../../image/typeBg.png") 0 0 / 120rpx 60rpx no-repeat;
+    color: #fff;
+    margin-left: -25px;
+    flex: 0 0 120rpx;
+    height: 55rpx;
+    line-height: 55rpx;
+    text-align: center;
+
+}
+.conf-title>.name{
+   font-size: 35rpx;
+    color: #000;
+    font-weight: bolder; 
+     margin: 0 8px;
+     flex: 1;
+
+}
+.conf-title>.status{
+    color: #ff7631;
+    background: #ffece3;
+    padding: 5rpx;
+    flex: 0 0 110rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+}
+
+.conf-time{
+    color: #999;
+    padding: 4px 0;
+    border-bottom: 1px dashed #ddd;
+}
+.cont-num,.con-member{
+   color: #999;
+    padding: 4px 0; 
+}
+
+.f-right{
+    float:right 
+}
+.red{
+    color: #e4393c
+}
+.con-member{
+    display: flex;
+
+}
+.con-member>.label{
+    flex: 0 0 180rpx;
+}
+.con-member>.content{
+    flex: 1;
+}
+
+.more{
+    color: #999;
+    text-align: center;
+    margin-bottom: 4px;
+    /* font-size: 20rpx; */
+}

@@ -1,0 +1,7 @@
+export interface showPlainInputUponKeyboardProps {
+    placeholder?: string;
+    text?: string;
+}
+export default function showPlainInputUponKeyboard(args: showPlainInputUponKeyboardProps): Promise<{
+    text: string;
+}>;

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("getStorageItem",{mobile:!0,mini:!0});export default function getStorageItem(e){return invoker.invoke("getStorageItem",e)}

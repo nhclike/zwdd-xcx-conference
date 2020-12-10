@@ -1,0 +1,28 @@
+export interface ContactComplexPickerParams {
+    title?: string;
+    limitTips?: string;
+    multiple?: boolean;
+    maxUsers?: number;
+    pickedUsers?: string[];
+    disabledUsers?: string[];
+    requiredUsers?: string[];
+    disabledDepartments?: string[];
+    pickedDepartments?: string[];
+    requiredDepartments?: string[];
+    responseUserOnly?: boolean;
+}
+export interface DepartmentModel {
+    id: string;
+    name: string;
+}
+export interface UserModel {
+    name: string;
+    avatar?: string;
+    userid: string;
+}
+export interface ContactComplexPickerResult {
+    selectedCount: number;
+    users: UserModel[];
+    departments: DepartmentModel[];
+}
+export default function chooseContactWithComplexPicker(params: ContactComplexPickerParams): Promise<ContactComplexPickerResult>;

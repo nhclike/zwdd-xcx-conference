@@ -1,0 +1,42 @@
+<template name="ListView">
+    <scroll-view scroll-y="{{true}}" onScrollToLower="loadMore" class="confScrollBox">
+        <view class="conf-list">
+            <block a:for={{confList}}>
+                <view class="item-box" onTap="toDetail" data-type="{{item.type}}" data-value="{{item.id}}">
+                    <view class="conf-title">
+                        <text class="label">{{item.typeName}}</text>
+                        <text class="name">{{item.name}}</text>
+                        <text class="status">{{item.statusName}}</text>
+                    </view>
+                    <view class="conf-time">
+                    <text>主持人:</text>
+                    <text>{{item.presenterName}}</text>
+                    <text class="f-right">{{item.startTime}}</text>
+                    <text class="f-right">召开时间:</text>
+                    <!-- <text class="f-right">出席情况</text> -->
+                    </view>
+                    <view class="cont-num">
+                    <text>实到人数:</text>
+                    <text><text class="red">{{item.arrivedNum}}</text>人</text>
+                    <text class="f-right">
+                    <text class="red">{{item.leaveNum}}</text>
+                    人</text>
+                    <text class="f-right">请假人员:</text>
+                    </view>
+                    <view class="con-member" a:if="{{item.typ!=1}}">
+                        <view class="label">
+                        <text>列席人员:</text>
+                            <text class="red">{{item.attendNum}}</text>
+                            <text>人</text>
+                    </view>
+                    
+                    <view class="content">{{item.attendData}}</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view a:if="{{!isMore&&isPaging}}" class="more">
+         没有更多数据!
+        </view>
+    </scroll-view>
+</template>

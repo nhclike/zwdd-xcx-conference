@@ -1,0 +1,6 @@
+export interface AlertParams {
+    message?: string;
+    title?: string;
+    button?: string;
+}
+export default function alert(params: AlertParams): Promise<void>;

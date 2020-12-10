@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/historyConference/historyConference",
+    "pages/detail/detail",
+    "pages/error/error",
+    "pages/test/test",
+    "pages/history/history"
+  ],
+  "window": {
+    "titleBarColor": "#1677FF",
+    "defaultTitle": "会议信息",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "textColor": "#666",
+    "selectedColor": "#1677FF",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "icon": "image/meeting.png",
+        "activeIcon": "image/meetingActive.png",
+        "name": "待开会议"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "icon": "image/history.png",
+        "activeIcon": "image/historyActive.png",
+        "name": "历史会议"
+      }
+    ]
+  }
+}

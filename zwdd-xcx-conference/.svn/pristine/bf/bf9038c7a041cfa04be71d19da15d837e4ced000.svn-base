@@ -1,0 +1,9 @@
+export declare type SourceType = 'camera' | 'album';
+export interface ChooseImageParams {
+    count?: number;
+    sourceType?: SourceType[];
+}
+export interface ChooseImageResult {
+    apFilePaths: string[];
+}
+export default function chooseLocalImage(args: ChooseImageParams): Promise<ChooseImageResult>;

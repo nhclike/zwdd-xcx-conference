@@ -1,0 +1,6 @@
+export interface OpenBrowserParams {
+    url: string;
+    browserType?: 1 | 2;
+    res?: string;
+}
+export default function openBrowser(args: OpenBrowserParams): Promise<unknown>;

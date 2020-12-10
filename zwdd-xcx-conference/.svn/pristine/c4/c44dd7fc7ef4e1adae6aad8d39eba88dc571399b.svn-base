@@ -1,0 +1,4 @@
+export interface StopListenNetworkStatusParams {
+    requestId: string;
+}
+export default function stopListenNetworkStatus(params: StopListenNetworkStatusParams): Promise<string | null>;

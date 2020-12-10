@@ -1,0 +1,11 @@
+export interface LocalFileExistParams {
+    params: {
+        url: string;
+    }[];
+}
+export interface LocalFileExistResult {
+    url: string;
+    path: string;
+    isExist: boolean;
+}
+export default function isDownloadFileExist(args: LocalFileExistParams): Promise<LocalFileExistResult[]>;

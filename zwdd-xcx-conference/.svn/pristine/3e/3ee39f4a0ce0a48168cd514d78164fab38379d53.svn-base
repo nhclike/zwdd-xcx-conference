@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("chooseMobileContacts",{mini:!0,mobile:!0});export default function chooseMobileContacts(o){return invoker.invoke("chooseMobileContacts",o)}

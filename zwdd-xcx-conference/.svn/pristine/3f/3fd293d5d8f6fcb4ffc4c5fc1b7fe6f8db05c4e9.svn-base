@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("scan",{mini:!0,mobile:!0});export default function scan(n){return invoker.invoke("scan",n)}

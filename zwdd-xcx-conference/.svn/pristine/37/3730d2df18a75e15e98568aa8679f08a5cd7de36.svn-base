@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("showSelect",{mini:!0,mobile:!0});export default function showSelect(e){return invoker.invoke("showSelect",e)}

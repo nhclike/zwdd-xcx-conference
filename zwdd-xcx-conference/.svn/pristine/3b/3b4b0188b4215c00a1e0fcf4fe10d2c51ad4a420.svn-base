@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("getTraceStatus",{mobile:!0});export default function getTraceStatus(e){return invoker.invoke("getTraceStatus",e)}

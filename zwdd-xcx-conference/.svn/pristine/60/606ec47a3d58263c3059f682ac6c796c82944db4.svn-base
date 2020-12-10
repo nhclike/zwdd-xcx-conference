@@ -1,0 +1,12 @@
+export interface ShowModalParams {
+    title: string;
+    url?: string;
+    size?: 'middle' | 'mini';
+    image?: string;
+    banner?: string[];
+    content?: string;
+    buttonLabels?: string[];
+}
+export default function showModal(args: ShowModalParams): Promise<string | {
+    buttonIndex: number;
+}>;

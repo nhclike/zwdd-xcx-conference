@@ -1,0 +1,1 @@
+import invoker from"./invoker";function alertHandler(e,r){var n=r.resolve,t=r.context;t&&t.call("alert",e,(function(){n()}))}invoker.registerAPI("alert",{mini:alertHandler,mobile:alertHandler});export default function alert(e){return invoker.invoke("alert",e)}

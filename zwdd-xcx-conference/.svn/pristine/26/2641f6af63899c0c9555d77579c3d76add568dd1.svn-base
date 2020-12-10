@@ -1,0 +1,4 @@
+export interface AttachmentResult {
+    fileUrl: string;
+}
+export default function uploadFileByType(params: {}): Promise<AttachmentResult>;

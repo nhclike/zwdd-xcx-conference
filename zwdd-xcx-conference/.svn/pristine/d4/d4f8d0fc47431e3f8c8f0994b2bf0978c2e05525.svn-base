@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("enableVpn",{mini:!0,mobile:!0});export default function enableVpn(){return invoker.invoke("enableVpn")}

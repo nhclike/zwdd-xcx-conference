@@ -1,0 +1,1 @@
+import invoker from"./invoker";export default function on(r,e){return invoker.registerEvent(r,e)}

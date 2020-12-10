@@ -1,0 +1,13 @@
+export interface SetOptionMenuParams {
+    title: string;
+    redDot?: string;
+    color?: string;
+    icon: string;
+    reset?: boolean;
+    override?: boolean;
+    menus?: object[];
+    icontype?: string;
+    contentDesc?: string;
+    preventDefault?: boolean;
+}
+export default function setOptionMenu(args: SetOptionMenuParams): Promise<{}>;

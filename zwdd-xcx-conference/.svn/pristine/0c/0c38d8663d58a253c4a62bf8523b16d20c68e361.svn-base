@@ -1,0 +1,5 @@
+export interface CreateVideoMeetingParams {
+    title: string;
+    calleeStaffIds: string[];
+}
+export default function createVideoMeeting(args: CreateVideoMeetingParams): Promise<void>;

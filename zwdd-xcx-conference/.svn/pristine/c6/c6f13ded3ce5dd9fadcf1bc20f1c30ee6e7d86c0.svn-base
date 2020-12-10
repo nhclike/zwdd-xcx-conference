@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("previewFile",{mini:!0,mobile:!0});export default function previewFile(e){return invoker.invoke("previewFile",e)}

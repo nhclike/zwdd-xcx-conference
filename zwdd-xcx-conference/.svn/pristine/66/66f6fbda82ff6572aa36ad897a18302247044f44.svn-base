@@ -1,0 +1,1 @@
+"use strict";var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault");exports.__esModule=!0,exports.default=on;var _invoker=_interopRequireDefault(require("./invoker"));function on(e,r){return _invoker.default.registerEvent(e,r)}module.exports=exports.default,module.exports.default=exports.default;

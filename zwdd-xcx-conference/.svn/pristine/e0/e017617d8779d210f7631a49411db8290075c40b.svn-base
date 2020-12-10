@@ -1,0 +1,6 @@
+export interface GeolocationStatusParams {
+    sceneIds: string[];
+}
+export default function getGeolocationStatus(args: GeolocationStatusParams): Promise<{
+    sceneId: string;
+}[]>;

@@ -1,0 +1,4 @@
+export interface OpenAppParams {
+    appId: string;
+}
+export default function openApp(params: OpenAppParams): Promise<void>;

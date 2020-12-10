@@ -1,0 +1,6 @@
+interface UTParams {
+    key: string;
+    value: string;
+}
+export default function ut(params: UTParams): Promise<{}>;
+export {};

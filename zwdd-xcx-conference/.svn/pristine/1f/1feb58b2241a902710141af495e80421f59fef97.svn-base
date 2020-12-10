@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("previewImage",{mini:!0,mobile:!0,pc:function(e,i){window.dingtalk.platform.invokeAPI(i.msgId,"biz.util.previewImage",e)}});export default function previewImage(e){return invoker.invoke("previewImage",e)}

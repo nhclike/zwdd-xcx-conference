@@ -1,0 +1,103 @@
+import { getConfDetail } from "../../utils/config";
+import { ddRequest } from "../../utils/ddAjax";
+
+let app = getApp();
+
+Page({
+  data: {
+   confData:  //会议信息
+   [
+  //    {
+  //    type:0,
+  //    typeName:'党组会',
+  //    id: "89628072-14fc-4c4c-8545-b40d7ce5ad0c",
+  //    name:'2019年第1115次会议',
+  //    status: 0, // 状态
+	// 	 statusName: "待召开", //状态
+  //    startTime:'2019/07/10 14:30',
+  //    arrivedNum:4,
+  //    leaveNum:5,
+  //    attendNum:6,
+  //    attendData:'张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六'
+  //  }
+   ],
+   topicList:[
+    //  {
+    //    name:'听取研究室关于最高法院"为推动高质量发展提供司法服务和保障"专题座谈会精神及贯彻意见建议等等',
+    //    reportPeople:'李占国',
+    //    reportTime:'60分钟',
+    //    reportDept:'研究室',
+    //    attendData:'张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六',
+    //    show:true
+    //  },
+    //  {
+    //    name:'听取研究室关于最高法院"为推动高质量发展提供司法服务和保障"专题座谈会精神及贯彻意见建议等等',
+    //    reportPeople:'李占国',
+    //    reportTime:'60分钟',
+    //    reportDept:'研究室',
+    //    attendData:'张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六',
+    //    show:true
+    //  },
+    //   {
+    //    name:'听取研究室关于最高法院"为推动高质量发展提供司法服务和保障"专题座谈会精神及贯彻意见建议等等',
+    //    reportPeople:'李占国',
+    //    reportTime:'60分钟',
+    //    reportDept:'研究室',
+    //    attendData:'张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六',
+    //    show:true
+    //  },
+    //  {
+    //    name:'听取研究室关于最高法院"为推动高质量发展提供司法服务和保障"专题座谈会精神及贯彻意见建议等等',
+    //    reportPeople:'李占国',
+    //    reportTime:'60分钟',
+    //    reportDept:'研究室',
+    //    attendData:'张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六张三,李四,王五,赵六',
+    //    show:true
+    //  }
+   ]
+  },
+  onLoad(query){
+    // my.alert({
+    //   content: JSON.stringify(query),
+    // });
+    let confId=query.confId;
+    let type=query.type;
+    this.getTopicList(confId,type);
+  },
+  //议题详情展开收缩
+  toggleDetail(e){
+    let i= e.target.dataset.value;
+    let isShow=!this.data.topicList[i].show;
+    const topicList=this.data.topicList.concat();
+    topicList[i].show=isShow;
+    this.setData({
+      topicList
+    })
+  },
+  getTopicList(confId,type){
+    var _this=this;
+    let userId=app.globalData.userId;
+
+    my.showLoading({
+      content: '加载中...',
+    });
+
+    ddRequest('post',getConfDetail, JSON.stringify({
+            conferenceId: confId,
+            type:type
+        })).then((res)=>{
+            console.log("success---getConfDetail",res);
+            const confData=[res.data.result.confData];
+            const topicList=res.data.result.topicList;
+            _this.setData({
+              confData,
+              topicList
+            })    
+        }).catch((err)=>{
+          console.log(err);
+        })
+   
+  }
+ 
+})
+

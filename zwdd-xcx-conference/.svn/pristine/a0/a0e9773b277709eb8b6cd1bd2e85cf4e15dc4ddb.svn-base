@@ -1,0 +1,7 @@
+export interface createChatGroupParams {
+    corpId?: string;
+    users?: string[];
+}
+export default function createChatGroup(params: createChatGroupParams): Promise<{
+    id: string;
+}>;

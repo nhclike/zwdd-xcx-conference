@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("chooseVideo",{mini:!0,mobile:!0});export default function chooseVideo(o){return invoker.invoke("chooseVideo",o)}

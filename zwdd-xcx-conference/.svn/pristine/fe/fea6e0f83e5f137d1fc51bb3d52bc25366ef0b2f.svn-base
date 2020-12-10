@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("showActionSheet",{mini:!0,mobile:!0,pc:function(i,o){window.dingtalk.platform.invokeAPI(o.msgId,"device.notification.actionSheet",i)}});export default function showActionSheet(i){return invoker.invoke("showActionSheet",i)}

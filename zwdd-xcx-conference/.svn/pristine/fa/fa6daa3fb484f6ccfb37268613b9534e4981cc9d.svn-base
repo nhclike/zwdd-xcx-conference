@@ -1,0 +1,24 @@
+export interface ProgressParams {
+    doneSize: string;
+    fileName: string;
+    filePath: string;
+    fileSize: string;
+    speed: number;
+}
+export interface DownloadFileParams {
+    url: string;
+    name: string;
+    onProgress?(res: ProgressParams): void;
+}
+interface MiniDownloadFileParams {
+    url: string;
+    header?: Record<string, string>;
+}
+interface DownloadFileResult {
+    apFilePath?: string;
+    error?: number;
+    errorMessage?: string;
+}
+declare function downloadFile(args: MiniDownloadFileParams): Promise<DownloadFileResult>;
+declare function downloadFile(args: DownloadFileParams): Promise<boolean>;
+export default downloadFile;

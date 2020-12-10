@@ -1,0 +1,5 @@
+export interface PreviewImageParams {
+    urls: string[];
+    current?: string;
+}
+export default function previewImage(args: PreviewImageParams): Promise<{}>;

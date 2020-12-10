@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("showModal",{mini:!0,mobile:!0,pc:function(o,i){window.dingtalk.platform.invokeAPI(i.msgId,"biz.util.openModal",o)}});export default function showModal(o){return invoker.invoke("showModal",o)}

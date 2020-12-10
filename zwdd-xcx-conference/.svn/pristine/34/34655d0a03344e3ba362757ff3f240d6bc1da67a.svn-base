@@ -1,0 +1,13 @@
+import { OnFailCallback } from './invoker';
+import { GeolocationResult } from './getGeolocation';
+export interface StartGeoLocationParams {
+    targetAccuracy?: number;
+    iOSDistanceFilter?: number;
+    useCache?: boolean;
+    withReGeocode?: boolean;
+    callBackInterval?: number;
+    sceneId: string;
+    onSuccess?: (geoResult: GeolocationResult) => void;
+    onFail?: (error: OnFailCallback) => void;
+}
+export default function startGeolocation(params: StartGeoLocationParams): Promise<{}>;

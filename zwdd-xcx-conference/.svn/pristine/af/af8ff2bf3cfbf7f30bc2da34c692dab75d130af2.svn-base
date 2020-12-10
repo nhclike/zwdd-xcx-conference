@@ -1,0 +1,7 @@
+export interface showDatePickerProps {
+    format?: string;
+    value?: string;
+}
+export default function showDatePicker(args: showDatePickerProps): Promise<{
+    value: string;
+}>;

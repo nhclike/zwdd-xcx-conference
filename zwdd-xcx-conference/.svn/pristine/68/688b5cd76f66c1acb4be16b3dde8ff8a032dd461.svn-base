@@ -1,0 +1,5 @@
+export interface StorageItem {
+    name: string;
+    value: string;
+}
+export default function setStorageItem(args: StorageItem): Promise<{}>;

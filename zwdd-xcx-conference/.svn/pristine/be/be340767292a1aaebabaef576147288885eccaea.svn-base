@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("openChat",{mini:!0,mobile:!0,pc:function(n,o){window.dingtalk.platform.invokeAPI(o.msgId,"internal.chat.toConversation",{cid:n.chatId})}});export default function openChat(n){return invoker.invoke("openChat",n)}

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("chooseDayWithCalendar",{mini:!0,mobile:!0});export default function chooseDayWithCalendar(e){return invoker.invoke("chooseDayWithCalendar",e)}

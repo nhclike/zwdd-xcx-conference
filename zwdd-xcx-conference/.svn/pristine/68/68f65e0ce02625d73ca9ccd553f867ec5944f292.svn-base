@@ -1,0 +1,4 @@
+export interface TitleParams {
+    title: string;
+}
+export default function setTitle(args: TitleParams): Promise<{}>;

@@ -1,0 +1,7 @@
+export interface shareToMessageParams {
+    url: string;
+    title?: string;
+    content?: string;
+    image?: string;
+}
+export default function shareToMessage(args: shareToMessageParams): Promise<void>;

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("showOptionMenu",{mobile:function(o,n){var e=n.resolve,i=n.context;i&&i.call("showOptionMenu",o,(function(){e()}))}});export default function showOptionMenu(){return invoker.invoke("showOptionMenu")}

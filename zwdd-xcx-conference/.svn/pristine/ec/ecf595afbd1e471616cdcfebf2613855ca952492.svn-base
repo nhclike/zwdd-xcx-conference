@@ -1,0 +1,1 @@
+export var deprecatedWarn=function(e,n){console.warn(e+"，在"+n+"版本中此方法会被移除，请尽快修改引入方式，避免影响使用。")};

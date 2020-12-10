@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("getUUID",{mobile:!0,mini:!0});export default function getUUID(){return invoker.invoke("getUUID")}

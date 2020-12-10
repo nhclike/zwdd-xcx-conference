@@ -1,0 +1,6 @@
+export interface StartVPNAppParams {
+    vpnAddress: string;
+    authInfo: string;
+    authType: string;
+}
+export default function startVPNApp(params: StartVPNAppParams): Promise<void>;

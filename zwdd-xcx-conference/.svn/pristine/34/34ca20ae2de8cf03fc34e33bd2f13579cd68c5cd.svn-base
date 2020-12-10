@@ -1,0 +1,18 @@
+export interface DepartmentsParams {
+    title?: string;
+    multiple?: boolean;
+    limitTips?: string;
+    maxDepartments?: number;
+    pickedDepartments?: string[];
+    disabledDepartments?: string[];
+    requiredDepartments?: string[];
+}
+export interface DepartmentModel {
+    id: string;
+    name: string;
+}
+export interface DepartmentsResults {
+    departmentsCount: number;
+    departments: DepartmentModel[];
+}
+export default function chooseDepartments(params: DepartmentsParams): Promise<DepartmentsResults>;

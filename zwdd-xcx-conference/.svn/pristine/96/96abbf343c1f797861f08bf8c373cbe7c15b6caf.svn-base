@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("stopRecordAudio",{mini:!0,mobile:!0});export default function stopRecordAudio(o){return invoker.invoke("stopRecordAudio",o)}

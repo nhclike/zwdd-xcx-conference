@@ -1,0 +1,4 @@
+export interface GeolocationParams {
+    sceneId: string;
+}
+export default function stopGeolocation(params: GeolocationParams): Promise<string | null>;

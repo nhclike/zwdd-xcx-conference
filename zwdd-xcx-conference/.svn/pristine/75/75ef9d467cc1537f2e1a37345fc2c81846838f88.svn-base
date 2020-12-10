@@ -1,0 +1,54 @@
+{
+  "_from": "@remax/mini-types@^0.1.0",
+  "_id": "@remax/mini-types@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-bVDcbUrp6p0PZwfS0xGVQS6k9f8B35BtZaYt/W/IGKh7VALYQ+tS2KcytLRmIJ/Vmohaw5ikIRN89I+frPdh4g==",
+  "_location": "/@remax/mini-types",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@remax/mini-types@^0.1.0",
+    "name": "@remax/mini-types",
+    "escapedName": "@remax%2fmini-types",
+    "scope": "@remax",
+    "rawSpec": "^0.1.0",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.0"
+  },
+  "_requiredBy": [
+    "/gdt-jsapi"
+  ],
+  "_resolved": "https://registry.npmjs.org/@remax/mini-types/-/mini-types-0.1.0.tgz",
+  "_shasum": "b30e9402c73eeb326a26ded4511381b918f984fa",
+  "_spec": "@remax/mini-types@^0.1.0",
+  "_where": "J:\\钉钉开发\\政务钉钉\\zwdd-xcx-conference\\node_modules\\gdt-jsapi",
+  "bugs": {
+    "url": "https://github.com/remaxjs/mini-types/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "TypeScript declarations for Alipay's mini program.",
+  "devDependencies": {
+    "dtslint": "^0.7.2"
+  },
+  "homepage": "https://github.com/remaxjs/mini-types#readme",
+  "keywords": [
+    "tinyapp",
+    "types"
+  ],
+  "license": "MIT",
+  "main": "./types/index.d.ts",
+  "name": "@remax/mini-types",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/remaxjs/mini-types.git"
+  },
+  "scripts": {
+    "ci": "npm run lint",
+    "lint": "dtslint types",
+    "prepublish": "npm run ci"
+  },
+  "types": "./types/index.d.ts",
+  "version": "0.1.0"
+}

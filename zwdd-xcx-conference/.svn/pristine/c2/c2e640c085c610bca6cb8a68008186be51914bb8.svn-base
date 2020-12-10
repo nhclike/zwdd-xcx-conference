@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("pickChatByCorpId",{mini:!0,mobile:!0});export default function pickChatByCorpId(i){return invoker.invoke("pickChatByCorpId",i)}

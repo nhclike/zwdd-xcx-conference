@@ -1,0 +1,13 @@
+export interface IChooseFileFromGDDriveParams {
+    maxNum?: number;
+    multiSelection?: boolean;
+}
+export interface File {
+    size: number;
+    path: string;
+    lastModified?: number;
+}
+export interface ChooseFileFromGDDriveResult {
+    files: File[];
+}
+export default function chooseFile(args: IChooseFileFromGDDriveParams): Promise<ChooseFileFromGDDriveResult>;

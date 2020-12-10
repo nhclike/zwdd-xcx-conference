@@ -1,0 +1,1 @@
+"use strict";var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault");exports.__esModule=!0,exports.default=scan;var _invoker=_interopRequireDefault(require("./invoker"));function scan(e){return _invoker.default.invoke("scan",e)}_invoker.default.registerAPI("scan",{mini:!0,mobile:!0}),module.exports=exports.default,module.exports.default=exports.default;

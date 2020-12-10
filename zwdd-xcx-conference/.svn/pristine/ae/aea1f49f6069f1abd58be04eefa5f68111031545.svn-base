@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("showHomeBottomTab",{mobile:!0});export default function showHomeBottomTab(o){return invoker.invoke("showHomeBottomTab",o)}

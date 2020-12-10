@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("takePhoto",{mini:!0,mobile:!0});export default function takePhoto(){return invoker.invoke("takePhoto")}

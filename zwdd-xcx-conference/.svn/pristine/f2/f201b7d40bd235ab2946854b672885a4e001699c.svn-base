@@ -1,0 +1,18 @@
+import { BridgeCallbackResult } from './invoker';
+interface SubscribeResult {
+    data: {
+        ACTION: number;
+        COUNT: number;
+        TOP: number;
+        LEFT: number;
+        HEIGHT: number;
+        WIDTH: number;
+    };
+}
+interface SubscribeParams {
+    channel: string;
+    onSuccess?: (res: SubscribeResult) => void;
+    onFail?: (res: BridgeCallbackResult<SubscribeResult>) => void;
+}
+export default function subscribe(params: SubscribeParams): Promise<{}>;
+export {};

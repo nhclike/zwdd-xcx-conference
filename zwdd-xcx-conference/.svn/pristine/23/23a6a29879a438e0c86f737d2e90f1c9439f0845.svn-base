@@ -1,0 +1,9 @@
+export interface RequestAuthCodeParams {
+    corpId: string;
+}
+export interface RequestAuthCodeResult {
+    expireTime: number;
+    code: string;
+    auth_code?: string;
+}
+export default function getAuthCode(args: RequestAuthCodeParams): Promise<RequestAuthCodeResult>;

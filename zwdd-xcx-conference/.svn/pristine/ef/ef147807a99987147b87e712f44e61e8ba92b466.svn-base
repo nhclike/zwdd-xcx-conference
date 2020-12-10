@@ -1,0 +1,20 @@
+export interface Options {
+    key: string;
+    value: string;
+}
+declare type CallMenuType = 7;
+export interface ShowQuickCallMenuParams {
+    corpId?: string;
+    staffId?: string;
+    phoneNumber?: string;
+    content?: string;
+    title?: string;
+    typeList?: CallMenuType[];
+}
+export interface ShowQuickCallMenuResult {
+    callTypeList: CallMenuType[];
+    callType: number;
+    callId: string;
+}
+export default function showQuickCallMenu(params: ShowQuickCallMenuParams): Promise<ShowQuickCallMenuResult>;
+export {};

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("openBrowser",{mini:!0,mobile:!0});export default function openBrowser(e){return invoker.invoke("openBrowser",e)}

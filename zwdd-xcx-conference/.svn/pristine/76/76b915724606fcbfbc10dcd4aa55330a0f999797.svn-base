@@ -1,0 +1,6 @@
+{
+  "axmlStrictCheck": true,
+  "enableParallelLoader": true,
+  "enableDistFileMinify": true,
+  "component2": true
+}

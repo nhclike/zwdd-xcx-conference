@@ -1,0 +1,5 @@
+export interface RequestRotateViewParams {
+    showStatusBar?: boolean;
+    clockwise?: boolean;
+}
+export default function rotateView(args: RequestRotateViewParams): Promise<{}>;

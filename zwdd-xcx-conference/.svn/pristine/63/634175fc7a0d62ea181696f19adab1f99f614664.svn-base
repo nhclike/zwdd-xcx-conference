@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("unsubscribe",{mobile:!0});export default function unsubscribe(e){return invoker.invoke("unsubscribe",e)}

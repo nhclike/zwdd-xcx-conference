@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("showDateTimePicker",{mini:!0,mobile:!0});export default function showDateTimePicker(e){return invoker.invoke("showDateTimePicker",e)}

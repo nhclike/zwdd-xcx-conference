@@ -1,0 +1,3 @@
+export default function startRecordAudio(params: {
+    maxDuration?: number;
+}): Promise<{}>;

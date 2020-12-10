@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("enablePullToRefresh",{mobile:function(e,l){var r=l.resolve,o=l.context;o&&o.call("pullRefresh",{pullRefresh:!0},(function(){r()}))}});export default function enablePullToRefresh(){return invoker.invoke("enablePullToRefresh")}

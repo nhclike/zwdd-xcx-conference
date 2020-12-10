@@ -1,0 +1,7 @@
+export interface ShowMultiSelectParams {
+    /** 待选项列表 */
+    options: string[];
+    /** 已选选项列表 */
+    selectOption?: string[];
+}
+export default function showMultiSelect(args: ShowMultiSelectParams): Promise<number[]>;

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("getGeolocationStatus",{mobile:!0});export default function getGeolocationStatus(o){return invoker.invoke("getGeolocationStatus",o)}

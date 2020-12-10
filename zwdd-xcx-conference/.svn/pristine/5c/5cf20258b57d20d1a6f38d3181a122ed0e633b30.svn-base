@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("readNFC",{mobile:!0,mini:!0});export default function readNFC(){return invoker.invoke("readNFC")}

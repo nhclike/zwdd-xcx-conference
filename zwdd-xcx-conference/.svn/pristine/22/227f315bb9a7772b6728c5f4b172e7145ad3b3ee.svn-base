@@ -1,0 +1,9 @@
+export interface ShowSocialShareParams {
+    socialShareType: 'text' | 'image' | 'url';
+    title: string;
+    description: string;
+    content: string;
+    icon: string;
+    supportExternal?: boolean;
+}
+export default function showSocialShare(args: ShowSocialShareParams): Promise<unknown>;

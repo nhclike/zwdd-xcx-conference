@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("openPage",{mini:!0,mobile:!0});export default function openPage(e){return invoker.invoke("openPage",e)}

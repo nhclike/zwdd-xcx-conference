@@ -1,0 +1,17 @@
+export declare enum ImageType {
+    image = 0,
+    video = 1
+}
+export interface ChooseImageParams {
+    enableVideo?: boolean;
+}
+export interface Image {
+    size: number;
+    path: string;
+    type: ImageType;
+    lastModified?: number;
+}
+export interface ChooseImageFromGDDriveResult {
+    images: Image[];
+}
+export default function chooseImage(args: ChooseImageParams): Promise<ChooseImageFromGDDriveResult>;

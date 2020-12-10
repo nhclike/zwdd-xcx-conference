@@ -1,0 +1,5 @@
+export interface SetNavLeftParams {
+    message?: string;
+    text: string;
+}
+export default function setNavLeftText(args: SetNavLeftParams): Promise<{}>;

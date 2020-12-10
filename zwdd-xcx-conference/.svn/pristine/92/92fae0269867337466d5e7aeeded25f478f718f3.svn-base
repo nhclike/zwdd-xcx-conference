@@ -1,0 +1,9 @@
+export interface PreviewFileParams {
+    corpId?: string;
+    spaceId?: string;
+    fileId?: string;
+    fileName?: string;
+    fileSize?: number;
+    fileType?: string;
+}
+export default function previewFile(params: PreviewFileParams): Promise<void>;

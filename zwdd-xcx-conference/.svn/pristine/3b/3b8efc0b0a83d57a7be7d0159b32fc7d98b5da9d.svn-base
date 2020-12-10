@@ -1,0 +1,11 @@
+export interface ChooseHalfDayParams {
+    /** 时间戳，默认选中时间，单位为毫秒ms */
+    default?: number;
+}
+export interface ChooseHalfDayResult {
+    /** 时间戳，用户选择日期当日0点的时间(在用户时区)，单位为毫秒ms */
+    chosen: number;
+    /** 整型，用户当前所在时区 */
+    timezone: number;
+}
+export default function chooseHalfDayWithCalendar(args: ChooseHalfDayParams): Promise<ChooseHalfDayResult>;

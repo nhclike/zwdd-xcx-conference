@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("getLanguageSetting",{mobile:!0,mini:!0,pc:function(e,n){window.dingtalk.platform.invokeAPI(n.msgId,"getLanguageSetting",e)}});export default function getLanguageSetting(){return invoker.invoke("getLanguageSetting")}

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("downloadAudio",{mini:!0,mobile:!0});export default function downloadAudio(o){return invoker.invoke("downloadAudio",o)}

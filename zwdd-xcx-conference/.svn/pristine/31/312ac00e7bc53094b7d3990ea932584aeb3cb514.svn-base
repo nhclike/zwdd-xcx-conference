@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("stopVPNApp",{mini:!0,mobile:!0});export default function stopVPNApp(o){return invoker.invoke("stopVPNApp",o)}

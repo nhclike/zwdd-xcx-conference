@@ -1,0 +1,9 @@
+export interface PickChatParams {
+    corpId: string;
+    isConfirm?: boolean;
+}
+export interface ChatResults {
+    cid: string;
+    title: string;
+}
+export default function pickChat(params: PickChatParams): Promise<ChatResults>;

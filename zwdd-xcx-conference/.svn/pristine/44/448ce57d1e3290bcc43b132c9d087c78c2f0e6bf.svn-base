@@ -1,0 +1,7 @@
+export interface OpenChatParams {
+    corpId?: string;
+    chatId?: string;
+    userId: string;
+    text?: string;
+}
+export default function openChat(params: OpenChatParams): Promise<{}>;

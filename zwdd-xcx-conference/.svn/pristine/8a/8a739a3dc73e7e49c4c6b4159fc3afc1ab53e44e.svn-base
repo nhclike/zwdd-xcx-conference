@@ -1,0 +1,7 @@
+export interface TraceReportParams {
+    traceId: string;
+}
+export interface TraceStatus {
+    status: 0 | 1;
+}
+export default function getTraceStatus(params: TraceStatus): Promise<TraceStatus>;

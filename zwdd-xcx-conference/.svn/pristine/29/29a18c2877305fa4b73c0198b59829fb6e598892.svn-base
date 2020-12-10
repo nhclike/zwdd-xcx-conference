@@ -1,0 +1,7 @@
+export interface showTimePickerProps {
+    format: string;
+    value: string;
+}
+export default function showTimePicker(args: showTimePickerProps): Promise<{
+    value: string;
+}>;

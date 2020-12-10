@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("chooseContact",{pc:function(o,n){window.dingtalk.platform.invokeAPI(n.msgId,"biz.contact.choose",o)}});export default function chooseContact(o){return invoker.invoke("chooseContact",o)}

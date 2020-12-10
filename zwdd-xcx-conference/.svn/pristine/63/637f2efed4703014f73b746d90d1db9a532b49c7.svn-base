@@ -1,0 +1,4 @@
+export interface OpenLocalFileParams {
+    url: string;
+}
+export default function openDownloadFile(args: OpenLocalFileParams): Promise<boolean>;

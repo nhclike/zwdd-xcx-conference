@@ -1,0 +1,35 @@
+export interface LocateOnMapParams {
+    latitude?: number;
+    longitude?: number;
+}
+/**
+ * {
+    province: 'xxx', // POI所在省会，可能为空
+    provinceCode: 'xxx', // POI所在省会编码，可能为空
+    city: 'xxx', // POI所在城市，可能为空
+    cityCode: 'xxx', // POI所在城市，可能为空
+    adName: 'xxx', // POI所在区名称，可能为空
+    adCode: 'xxx', // POI所在区编码，可能为空
+    distance: 'xxx', // POI与设备位置的距离
+    postCode: 'xxx', // POI的邮编，可能为空
+    snippet: 'xxx', // POI的街道地址，可能为空
+    title: 'xxx', // POI的名称
+    latitude: 39.903578, // POI的纬度
+    longitude: 116.473565, // POI的经度
+    }
+ */
+export interface GeolocationResult {
+    longitude: number;
+    latitude: number;
+    province: string;
+    provinceCode: string;
+    city: string;
+    cityCode: string;
+    adName: string;
+    adCode: string;
+    distance: string;
+    postCode: string;
+    snippet: string;
+    title: string;
+}
+export default function locateOnMap(args: LocateOnMapParams): Promise<GeolocationResult>;

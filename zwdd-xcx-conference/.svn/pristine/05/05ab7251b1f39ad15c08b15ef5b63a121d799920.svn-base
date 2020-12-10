@@ -1,0 +1,7 @@
+export interface StartWatchShakeParams {
+    sensitivity?: number;
+    frequency?: number;
+    callbackDelay?: number;
+    onSuccess?: () => void;
+}
+export default function startWatchShake(args: StartWatchShakeParams): Promise<void>;

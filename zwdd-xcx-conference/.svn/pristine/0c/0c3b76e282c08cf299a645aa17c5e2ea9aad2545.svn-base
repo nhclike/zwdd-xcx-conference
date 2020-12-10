@@ -1,0 +1,1 @@
+import getWaterMarkConfig from"./utils/getWaterMarkConfig";import{generateWatermark}from"./packages/h5-watermark/watermark";export default function getWaterMark(r,e){return void 0===r&&(r=""),new Promise((function(t,a){getWaterMarkConfig({pageInfo:r}).then((function(r){try{var n=generateWatermark(r,e);t(n)}catch(r){a(r)}}))}))}

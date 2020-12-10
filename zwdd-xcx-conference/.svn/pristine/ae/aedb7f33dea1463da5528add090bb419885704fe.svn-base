@@ -1,0 +1,9 @@
+declare type ICON_TYPE = 'alert' | 'success' | 'error' | 'warning' | 'information' | 'confirm' | 'fail';
+export interface ToastParams {
+    icon?: ICON_TYPE;
+    text?: string;
+    duration?: number;
+    delay?: number;
+}
+export default function toast(params: ToastParams): Promise<{}>;
+export {};

@@ -1,0 +1,9 @@
+/**
+ * 命名规范和原则：https://yuque.antfin-inc.com/docs/share/25f76d3e-0a78-4003-a26b-daa5bf947b68?# 《客户端UA规范及列表》
+ */
+export interface UserAgentResult {
+    group: string;
+    name: string;
+    version: string;
+}
+export default function getUserAgent(): Promise<UserAgentResult>;

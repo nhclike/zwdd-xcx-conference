@@ -1,0 +1,9 @@
+
+@import '../../components/error-view/index.acss';
+@import '../../components/list-view/index.acss';
+
+page{
+    height: 100vh;
+    background: #1677FF url("image/bg1.png")  no-repeat fixed top;
+    width: 100vw;
+}

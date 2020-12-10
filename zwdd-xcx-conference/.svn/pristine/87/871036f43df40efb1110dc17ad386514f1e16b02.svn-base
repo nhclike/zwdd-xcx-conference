@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("openApp",{mini:!0,mobile:!0});export default function openApp(e){return invoker.invoke("openApp",e)}

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("callPhone",{mini:!0,mobile:!0});export default function callPhone(e){return invoker.invoke("callPhone",e)}

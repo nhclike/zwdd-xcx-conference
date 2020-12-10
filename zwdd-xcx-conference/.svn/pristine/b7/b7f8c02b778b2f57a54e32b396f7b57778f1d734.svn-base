@@ -1,0 +1,7 @@
+export interface UploadFileParams {
+    filePath: string[];
+}
+export interface UploadFileResult {
+    result: string[];
+}
+export default function uploadFile(args: UploadFileParams): Promise<UploadFileResult>;

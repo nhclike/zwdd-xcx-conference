@@ -1,0 +1,9 @@
+export interface Options {
+    key: string;
+    value: string;
+}
+export interface ShowSelectParams {
+    source: Options[];
+    selectedKey?: string;
+}
+export default function showSelect(params: ShowSelectParams): Promise<Options>;

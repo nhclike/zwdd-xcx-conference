@@ -1,0 +1,21 @@
+declare type SignatureMode = 0 | 1;
+export interface ShowSignatureParams {
+    mode: SignatureMode;
+    copyRight: string;
+    url?: string;
+    fileName?: string;
+    fileType?: string;
+    userName?: string;
+    isSupportPen?: boolean;
+    top?: number;
+    left?: number;
+    width?: number;
+    height?: number;
+}
+export interface ShowSignatureResult {
+    mode: SignatureMode;
+    reason: string;
+    url: string;
+}
+export default function showSignature(params: ShowSignatureParams): Promise<ShowSignatureResult>;
+export {};

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("version",{mini:!0,mobile:!0});export default function version(){return invoker.invoke("version")}

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("ut",{pc:function(i,t){window.dingtalk.platform.invokeAPI(t.msgId,"biz.util.ut",i)}});export default function ut(i){return invoker.invoke("ut",i)}

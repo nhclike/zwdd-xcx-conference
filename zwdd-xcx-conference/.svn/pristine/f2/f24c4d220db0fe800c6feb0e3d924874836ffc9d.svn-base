@@ -1,0 +1,1 @@
+import invoker from"./invoker";export default function ready(o){"function"==typeof o?invoker.onReady(o):console.error("dd.ready's param must be function! ")}

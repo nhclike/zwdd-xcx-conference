@@ -1,0 +1,83 @@
+
+<view class="conf-container">
+    <scroll-view scroll-y="{{true}}">
+        <view class="conf-list">
+            <block a:for={{confData}}>
+                <view class="item-box">
+                    <view class="conf-title">
+                        <text class="label">{{item.typeName}}</text>
+                        <text class="name">{{item.name}}</text>
+                        <text class="status">{{item.statusName}}</text>
+                    </view>
+                    <view class="conf-time">
+                    <text>主持人:</text>
+                    <text>李占国</text>
+                    <text class="f-right">{{item.startTime}}</text>
+                    <text class="f-right">召开时间:</text>
+                    <!-- <text class="f-right">出席情况</text> -->
+                    </view>
+                    <view class="cont-num">
+                    <text>实到人数:</text>
+                    <text><text class="red">{{item.arrivedNum}}</text>人</text>
+                    <text class="f-right">
+                    <text class="red">{{item.leaveNum}}</text>
+                    人</text>
+                    <text class="f-right">请假人员:</text>
+                    </view>
+                    <view class="con-member">
+                        <view class="label">
+                        <text>列席人员:</text>
+                            <text class="red">{{item.attendNum}}</text>
+                            <text>人</text>
+                    </view>
+                    
+                    <view class="content">{{item.attendData}}</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="topic-list">
+          <view class="title">
+            议题列表
+          </view>
+          <view class="topic-box">
+            <block a:for={{topicList}}>
+            
+              <view class="topic-item">
+                <view class="name">
+                 {{index+1}},{{item.name}}
+                </view>
+                <view class="report"  data-value="{{index}}" onTap="toggleDetail">
+                  <text>汇报人:</text>
+                  <!-- <block a:for="{{item.reportList}}" a:for-item="report" a:for-index="index">
+                    <text class="reportPeopleLast" a:if="{{index==item.reportList.length-1}}">{{report.name}}</text>
+                    <text class="reportPeople" a:else>{{report.name}}</text>
+                  </block> -->
+                  <text class="reportPeople">{{item.reportList}}</text>
+                  <view class="f-right detail">
+                   <text>详情</text>
+                   <view class="icon-up f-right" a:if="{{item.show}}"></view>
+                   <view class="icon-down f-right" a:else></view> 
+                  </view>
+                </view>
+                <view class="report-info" a:if="{{item.show}}">
+                  <text>汇报时间:</text>
+                  <text>{{item.reportTime}}</text>
+                  <!-- <text class="f-right"> {{item.reportDept}}</text>
+                  <text class="f-right">汇报部门:</text> -->
+                </view>
+                <view class="topic-member" a:if="{{item.show}}">
+                  <view class="label">
+                    列席人:
+                  </view>
+                  <view class="content">
+                  {{item.attendData}}
+                  </view>
+                </view>
+                
+              </view>
+            </block>
+          </view>
+        </view>
+    </scroll-view>
+</view>

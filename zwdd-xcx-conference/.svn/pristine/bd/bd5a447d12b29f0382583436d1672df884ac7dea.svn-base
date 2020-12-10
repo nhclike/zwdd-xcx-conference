@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("shareToMessage",{mini:!0,mobile:!0,pc:function(e,i){window.dingtalk.platform.invokeAPI(i.msgId,"biz.util.share",e)}});export default function shareToMessage(e){return invoker.invoke("shareToMessage",e)}

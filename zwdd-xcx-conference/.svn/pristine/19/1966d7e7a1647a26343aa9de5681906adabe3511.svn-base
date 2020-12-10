@@ -1,0 +1,6 @@
+export declare type NETWORK_TYPE = 'wifi' | '2g' | '3g' | '4g' | '5g' | 'unknown' | 'none';
+export interface NetworkTypeResult {
+    result: NETWORK_TYPE;
+    isConnected?: boolean;
+}
+export default function getNetworkType(): Promise<NetworkTypeResult>;

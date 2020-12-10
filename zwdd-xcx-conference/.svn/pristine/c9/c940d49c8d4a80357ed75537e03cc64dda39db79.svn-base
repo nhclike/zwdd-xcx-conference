@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("dgUploadFile",{mini:!0,mobile:!0,pc:function(i,o){window.dingtalk.platform.invokeAPI(o.msgId,"biz.util.dgUploadFile",i)}});export default function uploadFile(i){return invoker.invoke("dgUploadFile",i)}

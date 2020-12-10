@@ -1,0 +1,5 @@
+export interface ChooseSpaceDirResult {
+    spaceId: string;
+    dirId: string;
+}
+export default function chooseSpaceDir(): Promise<ChooseSpaceDirResult>;

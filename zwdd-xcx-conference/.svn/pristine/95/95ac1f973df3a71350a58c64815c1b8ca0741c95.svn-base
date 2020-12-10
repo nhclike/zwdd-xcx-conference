@@ -1,0 +1,4 @@
+export interface CheckVPNAppInstalledResult {
+    isInstalled: boolean;
+}
+export default function checkVPNAppInstalled(): Promise<CheckVPNAppInstalledResult>;

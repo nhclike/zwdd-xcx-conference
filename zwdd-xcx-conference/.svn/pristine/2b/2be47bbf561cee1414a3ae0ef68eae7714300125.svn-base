@@ -1,0 +1,4 @@
+export interface DealWithBackActionParams {
+    isBack: boolean;
+}
+export default function dealWithBackAction(args: DealWithBackActionParams): Promise<unknown>;

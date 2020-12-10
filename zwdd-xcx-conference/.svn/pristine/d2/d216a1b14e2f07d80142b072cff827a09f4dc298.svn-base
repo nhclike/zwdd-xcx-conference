@@ -1,0 +1,5 @@
+export interface OpenSlidePanelParams {
+    url: string;
+    title: string;
+}
+export default function downloadFile(args: OpenSlidePanelParams): Promise<string>;

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("removeStorageItem",{mobile:!0,mini:!0});export default function removeStorageItem(e){return invoker.invoke("removeStorageItem",e)}

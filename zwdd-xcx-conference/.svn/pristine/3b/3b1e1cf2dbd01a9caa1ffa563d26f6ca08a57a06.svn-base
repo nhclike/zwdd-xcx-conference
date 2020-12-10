@@ -1,0 +1,4 @@
+export interface RequestCallPhoneParams {
+    phoneNum: string;
+}
+export default function callPhone(args: RequestCallPhoneParams): Promise<{}>;

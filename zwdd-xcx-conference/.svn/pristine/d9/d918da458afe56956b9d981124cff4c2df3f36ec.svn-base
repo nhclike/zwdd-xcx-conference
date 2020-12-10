@@ -1,0 +1,5 @@
+export default function getStorageItem(args: {
+    name: string;
+}): Promise<{
+    value: string;
+}>;

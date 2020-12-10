@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("authConfig",{mini:!0,mobile:!0});export default function authConfig(i){return invoker.invoke("authConfig",i)}

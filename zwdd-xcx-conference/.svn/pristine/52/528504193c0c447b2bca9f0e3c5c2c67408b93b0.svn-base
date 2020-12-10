@@ -1,0 +1,40 @@
+{
+  "name": "dd-xcx-demo",
+  "version": "1.0.0",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@babel/runtime": {
+      "version": "7.11.2",
+      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.11.2.tgz",
+      "integrity": "sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==",
+      "requires": {
+        "regenerator-runtime": "^0.13.4"
+      }
+    },
+    "@remax/mini-types": {
+      "version": "0.1.0",
+      "resolved": "https://registry.npmjs.org/@remax/mini-types/-/mini-types-0.1.0.tgz",
+      "integrity": "sha512-bVDcbUrp6p0PZwfS0xGVQS6k9f8B35BtZaYt/W/IGKh7VALYQ+tS2KcytLRmIJ/Vmohaw5ikIRN89I+frPdh4g=="
+    },
+    "gdt-jsapi": {
+      "version": "1.5.3",
+      "resolved": "https://registry.npmjs.org/gdt-jsapi/-/gdt-jsapi-1.5.3.tgz",
+      "integrity": "sha512-cOE5gAJ4oZn3PnVbOIZlmsa5kbVI48UtfJ7cOxjD6DSCL8F9nMR8K6qs9TliWEMKm8aspOBOlaqMbIfCk8Nx+Q==",
+      "requires": {
+        "@babel/runtime": "^7.10.2",
+        "@remax/mini-types": "^0.1.0"
+      }
+    },
+    "mini-antui": {
+      "version": "0.4.35",
+      "resolved": "https://registry.npmjs.org/mini-antui/-/mini-antui-0.4.35.tgz",
+      "integrity": "sha512-thLRUH418UN0rps+Dnt+iz1W4Ac/v8ZMscH6mgQmhkvvPd1q6vNFRXL2kIfemm9F6bG+WN2Lpik2qB0qqqieew=="
+    },
+    "regenerator-runtime": {
+      "version": "0.13.7",
+      "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz",
+      "integrity": "sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew=="
+    }
+  }
+}

@@ -1,0 +1,9 @@
+export interface ConfirmParams {
+    message: string;
+    title: string;
+    buttonLabels: string[];
+}
+export interface ConfirmResult {
+    buttonIndex?: number;
+}
+export default function confirm(params: ConfirmParams): Promise<ConfirmResult>;

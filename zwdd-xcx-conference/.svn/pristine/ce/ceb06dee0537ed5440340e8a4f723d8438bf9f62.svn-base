@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("saveFile",{mini:!0,mobile:!0});export default function saveFile(e){return invoker.invoke("saveFile",e)}

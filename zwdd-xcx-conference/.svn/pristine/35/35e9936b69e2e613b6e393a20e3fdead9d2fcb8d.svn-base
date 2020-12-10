@@ -1,0 +1,1 @@
+"use strict";exports.__esModule=!0,exports.deprecatedWarn=void 0;var deprecatedWarn=function(e,r){console.warn(e+"，在"+r+"版本中此方法会被移除，请尽快修改引入方式，避免影响使用。")};exports.deprecatedWarn=deprecatedWarn;

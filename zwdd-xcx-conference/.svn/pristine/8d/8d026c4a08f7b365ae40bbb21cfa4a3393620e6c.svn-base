@@ -1,0 +1,14 @@
+{
+  "name": "dd-xcx-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nhc",
+  "license": "ISC",
+  "dependencies": {
+    "gdt-jsapi": "^1.5.3"
+  }
+}

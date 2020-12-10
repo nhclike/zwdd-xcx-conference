@@ -1,0 +1,42 @@
+{
+  "_from": "gdt-jsapi",
+  "_id": "gdt-jsapi@1.5.3",
+  "_inBundle": false,
+  "_integrity": "sha512-cOE5gAJ4oZn3PnVbOIZlmsa5kbVI48UtfJ7cOxjD6DSCL8F9nMR8K6qs9TliWEMKm8aspOBOlaqMbIfCk8Nx+Q==",
+  "_location": "/gdt-jsapi",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "gdt-jsapi",
+    "name": "gdt-jsapi",
+    "escapedName": "gdt-jsapi",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gdt-jsapi/-/gdt-jsapi-1.5.3.tgz",
+  "_shasum": "0257bf033fff25127872b1dfc670917514f39ab0",
+  "_spec": "gdt-jsapi",
+  "_where": "J:\\钉钉开发\\政务钉钉\\zwdd-xcx-conference",
+  "author": {
+    "name": "sancun.zx"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@babel/runtime": "^7.10.2",
+    "@remax/mini-types": "^0.1.0"
+  },
+  "deprecated": false,
+  "description": "政务钉钉H5/小程序多端统一JSAPI",
+  "main": "index.js",
+  "name": "gdt-jsapi",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "version": "1.5.3"
+}

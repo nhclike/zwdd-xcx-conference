@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("showQuickCallMenu",{mini:!0,mobile:!0});export default function showQuickCallMenu(e){return invoker.invoke("showQuickCallMenu",e)}

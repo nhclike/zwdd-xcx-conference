@@ -1,0 +1,23 @@
+{
+  "id": "1987943",
+  "name": "dd-demo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1833855",
+      "name": "下箭头",
+      "font_class": "down",
+      "unicode": "e733",
+      "unicode_decimal": 59187
+    },
+    {
+      "icon_id": "1664367",
+      "name": "上箭头",
+      "font_class": "up",
+      "unicode": "e730",
+      "unicode_decimal": 59184
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("setNavLeftText",{mini:!0,mobile:!0,pc:function(e,t){window.dingtalk.platform.invokeAPI(t.msgId,"biz.navigation.setLeft",e)}});export default function setNavLeftText(e){return invoker.invoke("setNavLeftText",e)}

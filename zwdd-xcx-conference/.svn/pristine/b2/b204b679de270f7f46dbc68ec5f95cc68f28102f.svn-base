@@ -1,0 +1,15 @@
+export interface UploadFileParams {
+    url: string;
+    filePath: string;
+    fileName: string;
+    fileType: 'image' | 'video' | 'audio';
+    hideLoading: boolean;
+    header?: Record<string, string>;
+    formData?: Record<string, any>;
+}
+export interface UploadFileResult {
+    data: string;
+    statusCode: string;
+    header: Record<string, string>;
+}
+export default function chooseLocalImage(args: UploadFileParams): Promise<UploadFileResult>;

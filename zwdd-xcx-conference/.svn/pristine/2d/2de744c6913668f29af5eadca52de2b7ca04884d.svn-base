@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("checkVPNAppOnline",{mini:!0,mobile:!0});export default function checkVPNAppOnline(){return invoker.invoke("checkVPNAppOnline")}

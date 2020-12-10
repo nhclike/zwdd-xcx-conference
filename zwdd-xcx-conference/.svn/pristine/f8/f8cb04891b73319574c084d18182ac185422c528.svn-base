@@ -1,0 +1,10 @@
+export declare type AlertType = 1 | 2;
+export interface CreateDingParams {
+    users: string[];
+    corpId?: string;
+    alertType: AlertType;
+    text: string;
+}
+export default function createDing(params: CreateDingParams): Promise<{
+    success: boolean;
+}>;

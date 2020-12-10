@@ -1,0 +1,4 @@
+export interface ClosePageParams {
+    message?: string;
+}
+export default function closePage(args: ClosePageParams): Promise<{}>;

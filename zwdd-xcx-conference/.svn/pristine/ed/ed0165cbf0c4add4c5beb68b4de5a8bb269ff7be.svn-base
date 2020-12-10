@@ -1,0 +1,6 @@
+export interface DownloadAudioParams {
+    mediaId: string;
+}
+export default function downloadAudio(params: DownloadAudioParams): Promise<{
+    localAudioId: string;
+}>;

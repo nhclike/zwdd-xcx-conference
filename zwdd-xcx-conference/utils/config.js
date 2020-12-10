@@ -1,0 +1,16 @@
+//接口配置
+//const BASE_URL="https://courtding.xsnls.com";
+const BASE_URL="https://courtding.nblhtech.com";
+//const BASE_URL="http://172.19.82.219";
+//const BASE_URL="http://129.28.154.108";
+//const BASE_URL="http://121.196.55.68";
+
+export const configAjaxObj={
+  timeout:30000
+}
+//export const loginUrl="https://www.baidu.com"           //用户免登录
+
+export const loginUrl=BASE_URL+"/login"           //用户免登录
+export const getConfListOnline=BASE_URL+"/dingApi/conference/online"     //获取待开会议会议列表
+export const getConfListHistory=BASE_URL+"/dingApi/conference/history"     //获取历史会议会议列表
+export const getConfDetail=BASE_URL+"/dingApi/conference/info"     //获取会议详情

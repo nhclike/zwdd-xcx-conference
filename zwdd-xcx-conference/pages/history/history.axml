@@ -1,0 +1,34 @@
+<import src="../../components/error-view/index.axml" />
+<import src="../../components/list-view/index.axml" />
+
+<view class="conf-container">
+  <view class="content-box">
+    <view class="search-box">
+          <view class="icon-search"></view>
+          <input type="text" placeholder="搜索" onBlur="inputBlur" onFocus="inputFocus" onConfirm="inputConfirm" onInput="inputInput" />
+    </view>
+    <view class="tab-box"> 
+      <view class="tab-item">
+        <text class="title  {{isActive=='-1' ? 'active' : ''}}" data-value="-1" onTap="toggleTab">全部</text>
+      </view>
+      <view class="tab-item">
+        <text class="title  {{isActive=='0' ? 'active' : ''}}" data-value="0" onTap="toggleTab">党组会</text>
+      </view>
+      <view class="tab-item">
+        <text class="title  {{isActive=='1' ? 'active' : ''}}" data-value="1" onTap="toggleTab">审委会</text>
+      </view>
+      <view class="tab-item">
+        <text class="title  {{isActive=='2' ? 'active' : ''}}" data-value="2" onTap="toggleTab">其他</text>
+        
+      </view>
+    </view>
+    <view class="list-box"  a:if="{{!isBlank}}">
+          <template is="ListView" data={{...listData}} />  
+
+    </view>
+    <view class="error-box" a:else>
+      <template is="ErrorView" data={{...errorData}} />
+    </view>
+  </view>
+
+</view>

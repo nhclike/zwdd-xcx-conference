@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("isDownloadFileExist",{pc:function(i,o){window.dingtalk.platform.invokeAPI(o.msgId,"biz.util.isLocalFileExist",i)}});export default function isDownloadFileExist(i){return invoker.invoke("isDownloadFileExist",i)}

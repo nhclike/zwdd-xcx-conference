@@ -1,0 +1,9 @@
+export interface AuthConfigParams {
+    ticket: string;
+    jsApiList: string[];
+}
+export interface ValidateResult {
+    name: string;
+    validateResult: boolean;
+}
+export default function authConfig(args: AuthConfigParams): Promise<ValidateResult[]>;

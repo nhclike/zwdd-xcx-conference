@@ -1,0 +1,10 @@
+import { OnFailCallback } from './invoker';
+import { GeolocationResult } from './getGeolocation';
+export interface startTraceReportParams {
+    traceId: string;
+    collectPeriod?: number;
+    reportPeriod?: number;
+    onSuccess?: (traceResult: GeolocationResult) => void;
+    onFail?: (error: OnFailCallback) => void;
+}
+export default function startTraceReport(params: startTraceReportParams): Promise<{}>;

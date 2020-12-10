@@ -1,0 +1,38 @@
+if(!self.__appxInited) {
+self.__appxInited = 1;
+require('@alipay/appx-compiler/lib/sjsEnvInit');
+
+require('./config$');
+require('./importScripts$');
+
+var AFAppX = self.AFAppX;
+self.getCurrentPages = AFAppX.getCurrentPages;
+self.getApp = AFAppX.getApp;
+self.Page = AFAppX.Page;
+self.App = AFAppX.App;
+self.my = AFAppX.bridge || AFAppX.abridge;
+self.abridge = self.my;
+self.Component = AFAppX.WorkerComponent || function(){};
+self.$global = AFAppX.$global;
+self.requirePlugin = AFAppX.requirePlugin;
+
+
+if(AFAppX.registerApp) {
+  AFAppX.registerApp({
+    appJSON: appXAppJson,
+  });
+}
+
+if(AFAppX.compilerConfig){ AFAppX.compilerConfig.component2 = true; }
+
+function success() {
+require('../../app');
+require('../../pages/index/index?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/historyConference/historyConference?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/detail/detail?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/error/error?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/test/test?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+require('../../pages/history/history?hash=7da53690ff015fafc40ebbe2de99bf33c6f02acd');
+}
+self.bootstrapApp ? self.bootstrapApp({ success }) : success();
+}

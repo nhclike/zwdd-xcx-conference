@@ -1,0 +1,11 @@
+import { OnFailCallback } from './invoker';
+import { NETWORK_TYPE } from './getNetworkType';
+export interface NetworkStatusResult {
+    isConnect: boolean;
+    result: NETWORK_TYPE;
+}
+export interface StartListenNetworkStatusParams {
+    onSuccess: (result: NetworkStatusResult) => void;
+    onFail: OnFailCallback;
+}
+export default function startListenNetworkStatus(args: StartListenNetworkStatusParams): Promise<NetworkStatusResult>;

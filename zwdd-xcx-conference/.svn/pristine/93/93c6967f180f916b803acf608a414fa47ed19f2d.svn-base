@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("getPhoneInfo",{mini:!0,mobile:!0});export default function getPhoneInfo(){return invoker.invoke("getPhoneInfo")}

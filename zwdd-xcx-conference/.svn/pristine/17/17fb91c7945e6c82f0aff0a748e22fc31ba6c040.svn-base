@@ -1,0 +1,19 @@
+<import src="../../components/list-view/index.axml" />
+<import src="../../components/error-view/index.axml" />
+
+<view>
+  <view class="list-box">
+    <template is="ListView" data={{...listData}} />  
+  </view>
+  
+  <view a:if="false">
+        <button size="default" type="primary" onTap="goInput">弹起键盘</button>
+        <button size="default" type="primary" onTap="hideKeyboard">隐藏键盘</button>
+        <button size="default" type="primary" onTap="chooseCalendar">选择日历范围</button>
+        <button size="default" type="primary" onTap="chooseDate">选择日期</button>
+        <button size="default" type="primary" onTap="inputText">inputText</button>  
+        <input placeholder="搜索" onBlur="hideKeyboard" onFocus="goInput" onConfirm="inputConfirm" onInput="inputInput" />
+  </view>
+  <template is="ErrorView" data={{...errorData}} />
+
+</view>

@@ -1,0 +1,4 @@
+export interface LoadingParams {
+    text?: string;
+}
+export default function showLoading(params: LoadingParams): Promise<{}>;

@@ -1,0 +1,7 @@
+<import src="../../components/error-view/index.axml" />
+<import src="../../components/list-view/index.axml" />
+
+<view class="conf-container">
+  <template is="ListView" data={{...listData}} a:if="{{!isBlank}}"/>  
+  <template is="ErrorView" data={{...errorData}} a:else/>
+</view>

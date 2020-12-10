@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("getConfig",{mobile:!0,pc:function(o,i){window.dingtalk.platform.invokeAPI(i.msgId,"getConfig",o)}});export default function getConfig(){return invoker.invoke("getConfig",{})}

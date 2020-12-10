@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("uploadFile",{mini:!0});export default function chooseLocalImage(e){return invoker.invoke("uploadFile",e)}

@@ -1,0 +1,1 @@
+import invoker from"./invoker";invoker.registerAPI("disableWebviewBounce",{mobile:function(e,n){var o=n.resolve,i=n.context;i&&i.call("bounce",{enable:!1},(function(e){o(e)}))}});export default function disableWebviewBounce(){return invoker.invoke("disableWebviewBounce")}

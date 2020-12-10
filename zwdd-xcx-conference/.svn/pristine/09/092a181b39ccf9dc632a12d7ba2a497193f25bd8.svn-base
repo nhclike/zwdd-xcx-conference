@@ -1,0 +1,1 @@
+export default function getWaterMark(pageInfo?: string, onlyThePage?: string): Promise<string>;

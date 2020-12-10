@@ -1,0 +1,4 @@
+export interface PalyEndResult {
+    localAudioId: string;
+}
+export default function onAudioPlayEnd(): Promise<PalyEndResult>;

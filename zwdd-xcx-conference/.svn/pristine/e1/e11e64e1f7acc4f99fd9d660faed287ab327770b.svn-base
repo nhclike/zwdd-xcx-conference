@@ -1,0 +1,26 @@
+export interface GeolocationParams {
+    targetAccuracy?: number;
+    coordinate?: number;
+    withReGeocode?: boolean;
+    useCache?: boolean;
+}
+export interface GeolocationResult {
+    longitude: number;
+    latitude: number;
+    accuracy: number;
+    address: string;
+    province: string;
+    city: string;
+    district: string;
+    road: string;
+    netType: string;
+    operatorType: string;
+    errorMessage: string;
+    errorCode: number;
+    isWifiEnabled: boolean;
+    isGpsEnabled: boolean;
+    isFromMock: boolean;
+    isMobileEnabled: boolean;
+    provider: string;
+}
+export default function getGeolocation(args: GeolocationParams): Promise<GeolocationResult>;
